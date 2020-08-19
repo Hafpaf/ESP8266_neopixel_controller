@@ -1,31 +1,17 @@
 /*
-* ESP-DASH V2
-* Made by Ayush Sharma
-* Github URL: https://github.com/ayushsharma82/ESP-DASH
-* Support Me: https://www.patreon.com/asrocks5
-*
-* - Version Changelog - 
-* V1.0.0 - 11 Nov. 2017 - Library was Born
-* V1.0.1 - 13 Nov. 2017 - Fixed Empty SPIFFS Issue
-* V1.0.2 - 13 Nov. 2017 - Improvements on SPIFFS Issue
-* V1.0.3 - 24 Dec. 2017 - Pushing to Library Manager
-*
-* = Library Rewritten! =
-* V2.0.0 - 25 Jan 2019 - Wohoo! A breakthrough in performance and capabilities!
+* hafpaf 2020
+* 
+* ESP8266 Neopixel webserver controller
+* This code is bassed of 
+*   ESP-DASH https://github.com/ayushsharma82/ESP-DASH/blob/master/examples/ESP8266_blink/ESP8266_blink.ino
+*   and Adafruit Neopixel https://github.com/adafruit/Adafruit_NeoPixel/blob/master/examples/strandtest/strandtest.ino
 */
-
-// This Example is a Demo of Button Capability in ESP-DASH.
-// Open Dashboard after Uploading and Click Button to Blink On-Board LED at GPIO 2
-
 
 #include <Arduino.h>
 #include <ESP8266WiFi.h>
 #include <ESPAsyncTCP.h>
 #include <ESPAsyncWebServer.h>
 #include <ESPDash.h>
-//#include <iostream>
-//#include <fstream>
-//#include <string>
 
 #include <Adafruit_NeoPixel.h>
 #ifdef __AVR__
@@ -154,6 +140,7 @@ bool loopSelect = true;
 //NOTE TO SELF: MAKE ID work
 void btnCallback(const char * id){
    Serial.println("Button Clicked - "+String(id));
+   loopSelect = false;
    if(String(id) == "off") return colorWipe(strip.Color(0, 0, 0), 200); // turn off
    if(String(id) == "btn1") return colorWipe(strip.Color(255, 0, 0), 200); // red
    if(String(id) == "btn2") return colorWipe(strip.Color(  0, 255, 0), 200); // green

@@ -20,6 +20,24 @@ There is no security or authentication on the webserver, and it is intented for 
 
 - ESP8266 board drivers. `https://arduino.esp8266.com/stable/package_esp8266com_index.json`
 
-- ESP8266 library. From Libary manager
+- ESP8266 library: Found in libary manager
 
-- ESP-dash library. [https://github.com/ayushsharma82/ESP-DASH](https://github.com/ayushsharma82/ESP-DASH)
+- Adafruit neopixel library: Found in library manager
+
+- ESPAsyncTCP library: [https://github.com/me-no-dev/ESPAsyncTCP](https://github.com/me-no-dev/ESPAsyncTCP) 
+
+- ESPAsyncWebServer: [https://github.com/me-no-dev/ESPAsyncWebServer](https://github.com/me-no-dev/ESPAsyncWebServer)
+
+- ESP-dash library: [https://github.com/ayushsharma82/ESP-DASH](https://github.com/ayushsharma82/ESP-DASH)
+
+## Notes
+There is a few things to note about ESP8266_neopixel_controller:
+
+- Set the SSID and password to connect to the wifi
+
+- Set `LED_PIN` and `LED_COUNT` correctly.
+
+- The boards IP address will be printed out with Serial.print and can be found by opening the serial monitor.
+
+## Ressources
+- ESP8266_neopixel_controller is based of [https://github.com/ayushsharma82/ESP-DASH/blob/master/examples/ESP8266_blink/ESP8266_blink.ino](ESP-DASH ESP8266_blink.ino) and [https://github.com/adafruit/Adafruit_NeoPixel/blob/master/examples/strandtest/strandtest.ino](Neopixel strandtest.ino)
