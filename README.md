@@ -9,7 +9,9 @@ There is no security or authentication on the webserver, and it is intented for 
 
 - Neopixels. Read about [https://learn.adafruit.com/adafruit-neopixel-uberguide/best-practices](best practices here)
 
-- 1, 300-500 Ohm resitor/per neopixel
+- 1, 300-500 Ohm between data and first pixel
+
+- 1 ohms resistors between each Neopixel
 
 - Soldering iron
 
@@ -18,7 +20,7 @@ There is no security or authentication on the webserver, and it is intented for 
 ### Software
 - Arduino IDE, unless you use other cool stuff to program these boards.
 
-- ESP8266 board drivers. `https://arduino.esp8266.com/stable/package_esp8266com_index.json`
+- ESP8266 board drivers. Input the following into 'File -> Preferences -> Additional Boards Manager URLs':`https://arduino.esp8266.com/stable/package_esp8266com_index.json`
 
 - ESP8266 library: Found in libary manager
 
