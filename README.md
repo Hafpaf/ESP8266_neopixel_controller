@@ -7,15 +7,17 @@ There is no security or authentication on the webserver, and it is intented for 
 ### Hardware
 - An ESP8266 board
 
-- Neopixels. Read about [https://learn.adafruit.com/adafruit-neopixel-uberguide/best-practices](best practices here)
+- Neopixels. Read about [best practices here](https://learn.adafruit.com/adafruit-neopixel-uberguide/best-practices)
 
 - 1, 300-500 Ohm between data and first pixel
 
-- 1 ohms resistors between each Neopixel
+- 1 ohm resistors between each Neopixel
 
 - Soldering iron
 
 - About 3 short wires for power, ground and data
+
+- Something to solder on
 
 ### Software
 - Arduino IDE, unless you use other cool stuff to program these boards.
@@ -42,4 +44,4 @@ There is a few things to note about ESP8266_neopixel_controller:
 - The boards IP address will be printed out with Serial.print and can be found by opening the serial monitor.
 
 ## Ressources
-- ESP8266_neopixel_controller is based of [https://github.com/ayushsharma82/ESP-DASH/blob/master/examples/ESP8266_blink/ESP8266_blink.ino](ESP-DASH ESP8266_blink.ino) and [https://github.com/adafruit/Adafruit_NeoPixel/blob/master/examples/strandtest/strandtest.ino](Neopixel strandtest.ino)
+- ESP8266_neopixel_controller is based of [ESP-DASH ESP8266_blink.ino](https://github.com/ayushsharma82/ESP-DASH/blob/master/examples/ESP8266_blink/ESP8266_blink.ino) and [Neopixel strandtest.ino](https://github.com/adafruit/Adafruit_NeoPixel/blob/master/examples/strandtest/strandtest.ino)
